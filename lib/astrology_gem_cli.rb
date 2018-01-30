@@ -1,5 +1,2 @@
-require "astrology_gem_cli/version"
-
-module AstrologyGemCli
-  # Your code goes here...
-end
+require_relative "astrology_gem_cli/version"
+require_relative "astrology_gem_cli/cli"
