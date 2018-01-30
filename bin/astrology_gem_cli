@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "hello world"
+require './lib/astrology_gem_cli'
+
+AstrologyGemCli::CLI.new.call
