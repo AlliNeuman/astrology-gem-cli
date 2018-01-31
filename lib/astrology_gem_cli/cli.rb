@@ -7,19 +7,8 @@ class AstrologyGemCli::CLI
   end
 
   def list_horoscope_signs
-    puts "Check Your Horoscope!"
-    puts "1. Aquarius: Jan 20 - Feb 18"
-    puts "2. Pisces: Feb 19 - Mar 20"
-    puts "3. Aries: Mar 21 - Apr 19"
-    puts "4. Taurus: Apr 20 - May 20"
-    puts "5. Gemini: May 21 - Jun 20"
-    puts "6. Cancer: Jun 21 - Jul 22"
-    puts "7. Leo: Jul 23 - Aug 22"
-    puts "8. Virgo: Aug 23 - Sep 22"
-    puts "9. Libra: Sep 23 - Oct 22"
-    puts "10. Scorpio: Oct 23 - Nov 21"
-    puts "11. Sagittarius: Nov 22 - Dec 21"
-    puts "12. Capricorn: Dec 22 - Jan 19"
+
+    @horoscope = AstrologyGemCli::Horoscope.all
   end
 
   def menu
@@ -34,7 +23,7 @@ class AstrologyGemCli::CLI
       when "2"
         puts "You are a Pisces"
       when "3"
-        puts "you are an Aries"
+        puts "You are an Aries"
       when "4"
         puts "You are a Taurus"
       when "5"
