@@ -22,7 +22,9 @@ class AstrologyGemCli::CLI
       input = gets.strip.downcase
       if input.to_i > 0
         horoscope = @horoscope[input.to_i - 1]
+        puts "#{horoscope.headline}"
         puts "#{horoscope.name}"
+        puts "#{horoscope.dates}"
         puts "#{horoscope.summary}"
         puts "Lucky Number: #{horoscope.luckynumber}"
         puts "Financial Outlook: #{horoscope.financialoutlook}"
