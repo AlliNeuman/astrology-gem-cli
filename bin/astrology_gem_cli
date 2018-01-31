@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require "bundler/setup"
+require "astrology_gem_cli"
 require './lib/astrology_gem_cli'
 
 AstrologyGemCli::CLI.new.call

@@ -8,7 +8,7 @@ class AstrologyGemCli::CLI
 
   def list_horoscope_signs
 
-    @horoscope = AstrologyGemCli::Horoscope.all
+    @horoscope = AstrologyGemCli::Horoscope.today
   end
 
   def menu
