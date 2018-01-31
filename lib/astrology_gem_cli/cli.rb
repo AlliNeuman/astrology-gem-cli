@@ -17,33 +17,39 @@ class AstrologyGemCli::CLI
 
       puts "To see your horoscope, enter the number 1-12 that corresponds with your astrological sign or type 'exit'"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "You are an Aquarius"
-      when "2"
-        puts "You are a Pisces"
-      when "3"
-        puts "You are an Aries"
-      when "4"
-        puts "You are a Taurus"
-      when "5"
-        puts "You are a Gemini"
-      when "6"
-        puts "You are a Cancer"
-      when "7"
-        puts "You are a Leo"
-      when "8"
-        puts "You are a Virgo"
-      when "9"
-        puts "You are a Libra"
-      when "10"
-        puts "You are a Scorpio"
-      when "11"
-        puts "You are a Sagittarius"
-      when "12"
-        puts "You are a Capricorn"
+      if input.to_i > 0
+        puts @horoscope[input.to_i - 1]
+      elsif input == "list"
+        list_horoscope_signs
       else
-        puts "Enter your sign or type 'exit'"
+        "not sure what you want, type 'list' or 'exit'"
+      # case input
+      # when "1"
+      #   puts "You are an Aquarius"
+      # when "2"
+      #   puts "You are a Pisces"
+      # when "3"
+      #   puts "You are an Aries"
+      # when "4"
+      #   puts "You are a Taurus"
+      # when "5"
+      #   puts "You are a Gemini"
+      # when "6"
+      #   puts "You are a Cancer"
+      # when "7"
+      #   puts "You are a Leo"
+      # when "8"
+      #   puts "You are a Virgo"
+      # when "9"
+      #   puts "You are a Libra"
+      # when "10"
+      #   puts "You are a Scorpio"
+      # when "11"
+      #   puts "You are a Sagittarius"
+      # when "12"
+      #   puts "You are a Capricorn"
+      # else
+      #   puts "Enter your sign or type 'exit'"
 
 
       end
