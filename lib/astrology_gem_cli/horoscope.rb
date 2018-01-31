@@ -3,21 +3,13 @@ class AstrologyGemCli::Horoscope
   attr_accessor :name, :summary, :luckynumber, :financialoutlook, :compatibility
 
   def self.today
-    # puts "Check Your Horoscope!"
-    #
-    # puts "1. Aries: Mar 21 - Apr 19"
-    # puts "2. Taurus: Apr 20 - May 20"
-    # puts "3. Gemini: May 21 - Jun 20"
-    # puts "4. Cancer: Jun 21 - Jul 22"
-    # puts "5. Leo: Jul 23 - Aug 22"
-    # puts "6. Virgo: Aug 23 - Sep 22"
-    # puts "7. Libra: Sep 23 - Oct 22"
-    # puts "8. Scorpio: Oct 23 - Nov 21"
-    # puts "9. Sagittarius: Nov 22 - Dec 21"
-    # puts "10. Capricorn: Dec 22 - Jan 19"
-    # puts "11. Aquarius: Jan 20 - Feb 18"
-    # puts "12. Pisces: Feb 19 - Mar 20"
+    #scrape website http://www.kansascity.com/entertainment/horoscopes/ and return horoscope details
 
+    self.scrape_horoscopes
+  end
+
+  def scrape_horoscopes
+    horoscopes = []
     horoscope_1 = self.new
     horoscope_1.name = "Aries"
     horoscope_1.summary = "summary"
@@ -101,9 +93,9 @@ class AstrologyGemCli::Horoscope
     horoscope_12.luckynumber = "203"
     horoscope_12.financialoutlook = "very good"
     horoscope_12.compatibility = "Taurus"
-
-    [horoscope_1, horoscope_2, horoscope_3, horoscope_4, horoscope_5, horoscope_6, horoscope_7, horoscope_8, horoscope_9, horoscope_10, horoscope_11, horoscope_12]
-
+    #
+    # [horoscope_1, horoscope_2, horoscope_3, horoscope_4, horoscope_5, horoscope_6, horoscope_7, horoscope_8, horoscope_9, horoscope_10, horoscope_11, horoscope_12]
+    horoscopes
   end
 
 end

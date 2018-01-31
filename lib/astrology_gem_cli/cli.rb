@@ -9,16 +9,26 @@ class AstrologyGemCli::CLI
   def list_horoscope_signs
 
     @horoscope = AstrologyGemCli::Horoscope.today
+    @horoscope.each.with_index(1) do |horoscope, i|
+      puts "#{i}. #{horoscope.name}"
+    end
   end
 
   def menu
     input = nil
     while input != "exit"
 
-      puts "To see your horoscope, enter the number 1-12 that corresponds with your astrological sign or type 'exit'"
+      puts "To see your horoscope, enter the number 1-12 that corresponds with your astrological sign, type 'list' to see the list of signs or type 'exit'"
       input = gets.strip.downcase
       if input.to_i > 0
-        puts @horoscope[input.to_i - 1]
+        horoscope = @horoscope[input.to_i - 1]
+        puts "#{horoscope.name}"
+        puts "#{horoscope.summary}"
+        puts "Lucky Number: #{horoscope.luckynumber}"
+        puts "Financial Outlook: #{horoscope.financialoutlook}"
+        puts "Partner Compatibility: #{horoscope.compatibility}"
+
+
       elsif input == "list"
         list_horoscope_signs
       else
