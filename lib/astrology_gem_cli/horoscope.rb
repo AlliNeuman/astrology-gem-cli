@@ -19,8 +19,17 @@ class AstrologyGemCli::Horoscope
   def self.scrape_kcstar
     doc = Nokogiri::HTML(open("http://www.kansascity.com/entertainment/horoscopes/"))
     binding.pry
+    #headline code and cutting out the \n in the string
     headline = doc.search("div.teaser h4.title").text.gsub("\n", "")
-    name = doc.search("h2.sign")[0].text
+
+    #returns a string of all the horoscope names. Could use iteration to split
+    #could also use a more specific selector for each one individually
+
+    #use this if going to iterate.
+    name = doc.search("h2.sign").text
+
+
+
 
   end
 
