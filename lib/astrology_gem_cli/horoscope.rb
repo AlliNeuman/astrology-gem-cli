@@ -11,6 +11,7 @@ class AstrologyGemCli::Horoscope
   def self.scrape_horoscopes
     horoscopes = []
 
+
     horoscopes << self.scrape_kcstar
 
     horoscopes
@@ -18,22 +19,20 @@ class AstrologyGemCli::Horoscope
 
   def self.scrape_kcstar
     doc = Nokogiri::HTML(open("http://www.kansascity.com/entertainment/horoscopes/"))
-    binding.pry
+
     #headline code and cutting out the \n in the string
-    headline = doc.search("div.teaser h4.title").text.gsub("\n", "")
+    # headline = doc.search("div.teaser h4.title").text.gsub("\n", "")
 
-    #returns a string of all the horoscope names. Could use iteration to split
-    #could also use a more specific selector for each one individually
-
-    #use this if going to iterate.
-    name = doc.search("h2.sign").text
-
-
-
-
+    doc.css("div.horoscope").each do |horoscope|
+      horoscope_name = horoscope.css("h2.sign").text
+      horoscope_dates = horoscope.css("div.dates").text
+      horoscope_summary = horoscope.css("p").text
+      lucky_number = horoscope.css("div.lucky_number").text.gsub("Lucky Number","")
+      financial_outlook = horoscope.css("div.financial_outlook").text.gsub("Financial Outlook", "")
+      compatible_sign = horoscope.css("div.compatible_sign").text.gsub("Compatible Sign", "")
+      binding.pry
+    end
+    horoscope
+    binding.pry
   end
-
-
-
-
 end
