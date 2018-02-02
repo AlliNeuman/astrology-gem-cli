@@ -1,16 +1,15 @@
 class Astrology::Cli
 
-  attr_accessor :headline, :name, :dates, :summary, :lucky_number, :financial_outlook, :compatibility
 
   def call
-    list_horoscope_signs
+    @header = Astrology::Scraper.scrape_kcstar
+    list_horoscopes
     menu
     goodbye
   end
 
-    def list_horoscope_signs
-      horoscope = Astrology::Horoscope.today
-      horoscope.each.with_index(1) do |horoscope, i|
+    def list_horoscopes
+      Astrology::Horoscope.all.each.with_index(1) do |horoscope, i|
         puts "#{i}. #{horoscope.name}"
       end
     end
