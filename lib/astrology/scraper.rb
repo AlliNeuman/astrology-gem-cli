@@ -16,6 +16,6 @@ class Astrology::Scraper
         horoscope.save
       end
 
-      horoscope.headline = doc.search("div.teaser h4.title").text.gsub("\n", "")
+      headline = doc.search("div.teaser h4.title").text.gsub("\n", "")
     end
 end
