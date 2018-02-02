@@ -2,7 +2,7 @@ class Astrology::Cli
 
 
   def call
-    @header = Astrology::Scraper.scrape_kcstar
+    @headline = Astrology::Scraper.scrape_kcstar
     list_horoscopes
     menu
     goodbye
@@ -18,11 +18,12 @@ class Astrology::Cli
       input = nil
       while input != "exit"
 
-        puts "To see your horoscope, enter the number 1-12 that corresponds with your astrological sign, type 'list' to see the list of signs or type 'exit'"
+        puts "To see your horoscope, enter the number 1-12 that corresponds with your astrological sign."
+        puts "Alternatively, type 'list' to see the list of signs or type 'exit'"
         input = gets.strip.downcase
         if input.to_i > 0
-          horoscope = @horoscope[input.to_i - 1]
-          puts "#{horoscope.headline}"
+          horoscope = Astrology::Horoscope.all[input.to_i - 1]
+          puts "#{@headline}"
           puts "#{horoscope.name}"
           puts "#{horoscope.dates}"
           puts "#{horoscope.summary}"
@@ -30,17 +31,16 @@ class Astrology::Cli
           puts "Financial Outlook: #{horoscope.financial_outlook}"
           puts "Partner Compatibility: #{horoscope.compatibility}"
 
-
         elsif input == "list"
-          list_horoscope_signs
+          list_horoscope
         else
-          "not sure what you want, type 'list' or 'exit'"
+          "Not sure what you want, type 'list' or 'exit'."
         end
       end
     end
 
     def goodbye
-      puts "check back again for your daily horoscope!"
+      puts "Check back again for your daily horoscope!"
     end
 
   end
