@@ -1,6 +1,6 @@
 class Astrology::Horoscope
 
-  attr_accessor :headline, :name, :dates, :summary, :lucky_number, :financial_outlook, :compatibility
+  attr_accessor :headline, :name, :dates, :summary, :lucky_number, :financial_outlook, :compatible_sign
 
   @@all = []
 
@@ -10,6 +10,7 @@ class Astrology::Horoscope
 
   def save
     @@all << self
+
   end
 
 end
