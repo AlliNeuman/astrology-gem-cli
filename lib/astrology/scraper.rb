@@ -1,4 +1,4 @@
-class Scraper
+class Astrology::Scraper
 
   def self.scrape_kcstar
     doc = Nokogiri::HTML(open("http://www.kansascity.com/entertainment/horoscopes/"))
