@@ -1,4 +1,4 @@
-class AstrologyGemCli::Horoscope
+class Astrology::Horoscope
 
   attr_accessor :headline, :name, :dates, :summary, :lucky_number, :financial_outlook, :compatibility
 

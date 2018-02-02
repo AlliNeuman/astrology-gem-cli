@@ -1,8 +1,5 @@
-# AstrologyGemCli
+# Astrology
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/astrology_gem_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -18,11 +15,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install astrology_gem_cli
+    $ gem install astrology
 
 ## Usage
 
-TODO: Write usage instructions here
+This app should be used to grab your daily horoscope only.
+The website scrapes the Kansas City Star's newspaper horoscope page.
 
 ## Development
 
@@ -40,4 +38,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the AstrologyGemCli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'allisontzadok-171597'/astrology_gem_cli/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Astrology project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'allisontzadok-171597'/astrology_gem_cli/blob/master/CODE_OF_CONDUCT.md).

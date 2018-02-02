@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    astrology_gem_cli (0.1.0)
+    astrology (0.1.0)
       nokogiri
 
 GEM
@@ -35,7 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  astrology_gem_cli!
+  astrology!
   bundler (~> 1.16)
   pry
   rake (~> 10.0)

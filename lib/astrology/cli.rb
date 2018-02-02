@@ -1,4 +1,4 @@
-class AstrologyGemCli::CLI
+class Astrology::Cli
 
   attr_accessor :headline, :name, :dates, :summary, :lucky_number, :financial_outlook, :compatibility
 
@@ -9,7 +9,7 @@ class AstrologyGemCli::CLI
   end
 
     def list_horoscope_signs
-      horoscope = AstrologyGemCli::Horoscope.today
+      horoscope = Astrology::Horoscope.today
       horoscope.each.with_index(1) do |horoscope, i|
         puts "#{i}. #{horoscope.name}"
       end

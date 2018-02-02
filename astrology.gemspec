@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "astrology_gem_cli/version"
+require "astrology/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "astrology_gem_cli"
-  spec.version       = AstrologyGemCli::VERSION
+  spec.name          = "astrology"
+  spec.version       = Astrology::VERSION
   spec.authors       = ["'Allison Tzadok'"]
   spec.email         = ["'allisontzadok@gmail.com'"]
 
