@@ -3,7 +3,6 @@ PATH
   specs:
     astrology (0.1.0)
       nokogiri
-      word_wrap
 
 GEM
   remote: https://rubygems.org/
@@ -31,7 +30,6 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.0)
-    word_wrap (1.0.0)
 
 PLATFORMS
   ruby

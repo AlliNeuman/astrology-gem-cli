@@ -8,11 +8,11 @@ class Astrology::Cli
   end
 
   def list_horoscopes
-      puts "Welcome to Astrology Gem!"
-      puts "Enter a number 1-12 to view your daily horoscope"
-      puts "**************************************************"
-      puts printf("%39s", "Horoscope Sign & Birthdate Range")
-      puts "--------------------------------------------------"
+    puts "Welcome to Astrology Gem!"
+    puts "Enter a number 1-12 to view your daily horoscope"
+    puts "**************************************************"
+    puts printf("%39s", "Horoscope Sign & Birthdate Range")
+    puts "--------------------------------------------------"
     Astrology::Horoscope.all.each.with_index(1) do |horoscope, i|
       puts "#{sprintf("%3d", i)}.  #{horoscope.name.ljust(15)} #{horoscope.dates}"
     end

@@ -13,4 +13,6 @@ class Astrology::Horoscope
 
   end
 
+
+
 end
