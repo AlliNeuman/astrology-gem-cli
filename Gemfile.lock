@@ -3,6 +3,7 @@ PATH
   specs:
     astrology (0.1.0)
       nokogiri
+      word_wrap
 
 GEM
   remote: https://rubygems.org/
@@ -11,7 +12,7 @@ GEM
     diff-lcs (1.3)
     method_source (0.9.0)
     mini_portile2 (2.3.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pry (0.11.2)
       coderay (~> 1.1.0)
@@ -30,6 +31,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.0)
+    word_wrap (1.0.0)
 
 PLATFORMS
   ruby

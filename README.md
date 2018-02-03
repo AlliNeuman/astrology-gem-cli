@@ -1,5 +1,11 @@
 # Astrology
 
+This app adds a little bit of daily excitement to life.
+Execute the file and you will see a list of the astrology signs and the corresponding birthdate ranges, for those people who don't know their sign.
+Select the number associate with the horoscope you would like to retrieve more details on.
+The daily horoscope will print out with the current date, horoscope sign, summary, lucky number, financial outlook and partner compatibility.
+You can choose to retrieve the original list of horoscopes again to select another horoscope sign, or type exit.
+
 
 ## Installation
 
