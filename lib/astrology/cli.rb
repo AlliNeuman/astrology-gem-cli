@@ -22,10 +22,8 @@ class Astrology::Cli
     input = nil
     while input != "exit"
 
-
-
       input = gets.strip.downcase
-      if input.to_i > 0
+      if input.to_i > 0 && input.to_i < 13
         horoscope = Astrology::Horoscope.all[input.to_i - 1]
         puts "**************************************************"
         puts printf("%44s", @headline)
@@ -43,11 +41,15 @@ class Astrology::Cli
         puts "Type 'list' to see the list of signs again."
         puts "Type 'exit' if you are done for the day!"
 
+      elsif input.to_i > 12
+        puts "Please enter a valid number for a Horoscope."
+
 
       elsif input == "list"
         list_horoscopes
       else
-        "not sure what you want, type 'list' or 'exit'"
+        puts "Not sure what you are looking for."
+        puts "Type 'list', 'exit', or make a valid selection."
       end
     end
   end
