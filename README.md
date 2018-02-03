@@ -19,10 +19,6 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install astrology
-
 ## Usage
 
 This app should be used to grab your daily horoscope only.

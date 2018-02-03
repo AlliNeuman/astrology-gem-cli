@@ -8,10 +8,10 @@ class Astrology::Cli
   end
 
   def list_horoscopes
-    puts "Welcome to Astrology Gem!"
-    puts "Enter a number 1-12 to view your daily horoscope"
+    puts "Welcome to Astrology Gem!".center(50)
+    puts "Enter a number 1-12 to view your daily horoscope".center(50)
     puts "**************************************************"
-    puts printf("%39s", "Horoscope Sign & Birthdate Range")
+    puts "Horoscope Sign & Birthdate Range".center(50)
     puts "--------------------------------------------------"
     Astrology::Horoscope.all.each.with_index(1) do |horoscope, i|
       puts "#{sprintf("%3d", i)}.  #{horoscope.name.ljust(15)} #{horoscope.dates}"
@@ -26,18 +26,16 @@ class Astrology::Cli
       if input.to_i > 0 && input.to_i < 13
         horoscope = Astrology::Horoscope.all[input.to_i - 1]
         puts "**************************************************"
-        puts printf("%44s", @headline)
+        puts @headline.center(50)
         puts "--------------------------------------------------"
-        puts printf("%25s", horoscope.name)
+        puts horoscope.name.center(50)
         puts " "
-        puts horoscope.summary
+        puts horoscope.summary.ljust(50)
         puts " "
         puts "Lucky Number:  #{horoscope.lucky_number}"
-        puts " "
         puts "Financial Outlook:  #{horoscope.financial_outlook}"
-        puts " "
         puts "Partner Compatibility:  #{horoscope.compatible_sign}"
-        puts " "
+        puts "--------------------------------------------------"
         puts "Type 'list' to see the list of signs again."
         puts "Type 'exit' if you are done for the day!"
 
