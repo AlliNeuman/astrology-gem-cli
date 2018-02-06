@@ -30,7 +30,8 @@ class Astrology::Cli
         puts "--------------------------------------------------"
         puts horoscope.name.center(50)
         puts " "
-        puts horoscope.summary.ljust(50)
+        # puts horoscope.paragraph_summary
+        puts horoscope.paragraph_summary
         puts " "
         puts "Lucky Number:  #{horoscope.lucky_number}"
         puts "Financial Outlook:  #{horoscope.financial_outlook}"
@@ -51,6 +52,7 @@ class Astrology::Cli
       end
     end
   end
+
 
   def goodbye
     puts "Check back again for your daily horoscope!"
