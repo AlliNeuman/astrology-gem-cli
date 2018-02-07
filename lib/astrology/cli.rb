@@ -40,14 +40,9 @@ class Astrology::Cli
         puts "Type 'list' to see the list of signs again."
         puts "Type 'exit' if you are done for the day!"
 
-      elsif input.to_i > 12
-        puts "Not sure what you are looking for."
-        puts "Type 'list', 'exit', or make a valid selection."
-
-
       elsif input == "list"
         list_horoscopes
-      else
+      else input.to_i > 12 || input != "list"
         puts "Not sure what you are looking for."
         puts "Type 'list', 'exit', or make a valid selection."
       end

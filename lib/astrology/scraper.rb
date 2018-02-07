@@ -5,6 +5,7 @@ class Astrology::Scraper
     doc = Nokogiri::HTML(open("http://www.kansascity.com/entertainment/horoscopes/"))
 
     doc.css("div.horoscope").each do |horoscopes|
+
       horoscope = Astrology::Horoscope.new
       horoscope.name = horoscopes.css("h2.sign").text
       horoscope.dates = horoscopes.css("div.dates").text
