@@ -26,7 +26,6 @@ class Astrology::Horoscope
       else
         current_line = letter_count
         "\n#{word}"
-
       end
     end
     correct_width.join(" ")

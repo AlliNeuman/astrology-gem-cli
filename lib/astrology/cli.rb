@@ -41,7 +41,8 @@ class Astrology::Cli
         puts "Type 'exit' if you are done for the day!"
 
       elsif input.to_i > 12
-        puts "Please enter a valid number for a Horoscope."
+        puts "Not sure what you are looking for."
+        puts "Type 'list', 'exit', or make a valid selection."
 
 
       elsif input == "list"
